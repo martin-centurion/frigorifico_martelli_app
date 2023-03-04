@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./index.css";
 function ItemList ( { users }) {
     return (
@@ -9,7 +10,9 @@ function ItemList ( { users }) {
                     <div className="producto__content-title">
                         <h1>{user.title}</h1>
                     </div>
-                    <button>Ver más</button>
+                    <Link to={`/producto/${user.id}`}>
+                            <button>Ver más</button>
+                    </Link>
                 </div>
             ))}
         </div>
